@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/BombBadgeIcon.png">
+    <title>Сайт абсолютно ни о чём</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- CSS  -->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <nav class="grey" role="navigation">
+      <div class="nav-wrapper">
+          <a href="index.html" class="navbar-img">
+          <img class="responsive-img" src="images/BombBadgeIcon.png">
+          </a>
+          <a href="#" data-target="mobile-nav" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down" id="desktop-nav">
+          <li><a href="#" class="waves-effect transparent btn"><i class="material-icons left">account_circle</i>Обо мне</a></li>
+          <li><a href="#" class="waves-effect transparent btn"><i class="material-icons left">folder</i>Проекты</a></li>
+          <li><a href="send_message.html" class="waves-effect transparent btn disabled"><i class="material-icons left">contact_mail</i>Гостевая книга</a></li>
+          <li><a href="#" class="waves-effect transparent btn"><i class="material-icons left">add</i>Дополнительная информация</a></li>
+          </ul>
+      </div>
+    </nav>
+    <ul class="sidenav sidenav-close" id="mobile-nav">
+      <li><a href="#" class="waves-effect"><i class="material-icons">account_circle</i>Обо мне</a></li>
+      <li><a href="#" class="waves-effect"><i class="material-icons">folder</i>Проекты</a></li>
+      <li><a href="send_message.html" class="waves-effect disabled"><i class="material-icons">contact_mail</i>Гостевая книга</a></li>
+      <li><a href="#" class="waves-effect"><i class="material-icons">add</i>Дополнительная информация</a></li>
+    </ul>
+    <main class="main">
+      <div class="container-fluid main__container">
+        <center><i class="main_material_icon material-icons">contact_mail</i></center>
+        <section class="main__columns">
+          <div class="row">
+            <div class="column_left cyan col s12 m6 l6" id="main_column_left">
+              <div class="column_left__icon-block">
+                <div class="center black-text">
+                  <i class="column_material_icon material-icons large">mail</i>
+                  <h5 class="center">Написать сообщение</h5>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12 m6 l6">
+                  <i class="orange-text material-icons prefix">person</i>
+                  <input id="nickname_input" type="text" class="white-text validate" required maxlength="64" data-length="64">
+                  <label for="nickname_input" class="white-text">Имя</label>
+                </div>
+                  <div class="file-field input-field col s12 m6 l6">
+                    <div class="waves-effect orange btn-small">
+                      <i id="avatar_empty" class="material-icons left">image</i>Аватар
+                      <input id="avatar_input" type="file" accept="image/*">
+                    </div>
+                    <div class="file-path-wrapper">
+                      <input class="file-path validate" type="text">
+                    </div>
+                  </div>
+                  <div class="input-field col s12 m12 l12">
+                    <i class="orange-text material-icons prefix">mode_edit</i>
+                    <input id="message_input" type="text" class="white-text validate" required minlength="1" data-length="256">
+                    <label for="message_input" class="white-text">Сообщение</label>
+                  </div>
+                </div>
+              <div class="row">
+                <center>
+                  <button class="orange btn waves-effect" type="submit" id="message_submit">Отправить
+                    <i class="material-icons right">send</i>
+                  </button>
+                </center>
+              </div>
+            </div>
+            <div class="column_right orange col s12 m6 l6" id="main_column_right">
+              <div class="column_right__icon-block">
+                <div class="center black-text">
+                  <i class="column_material_icon material-icons large">all_inbox</i>
+                  <h5 class="center">Гостевая книга</h5>
+                  <p class="center light" id="messages_empty_text">Здесь пока ничего нет. Первым будешь?</p>
+                </div>
+              </div>
+              <ul class="collection" id="messages_collection" hidden>
+                <!-- Список с сообщениями гостевой книги.-->
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="page-footer grey">
+      <div class="footer-copyright" id="copyright_footer">
+          <div class="container">
+          Это сделал <a class="black-text text-lighten-3" href="http://vk.com/shararamosh">он</a> с использованием <a class="black-text text-lighten-3" href="http://materializecss.com">Materialize</a>.
+          </div>
+      </div>
+    </footer>
+    <!--  Scripts-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
