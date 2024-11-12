@@ -8,8 +8,8 @@ function getBase64(file) {
   return new Promise((resolve, reject) => {
     const reader = new FileReader();
     reader.readAsDataURL(file);
-    reader.onload = () => resolve(reader.result);
-    reader.onerror = error => reject(error);
+    reader.onload = () => resolve(reader.result)
+    reader.onerror = error => reject(error)
   });
 }
 message_submit_btn = document.getElementById("message_submit")
@@ -31,18 +31,13 @@ function upload_message_data() {
   console.log(nickname+" написал:")
   console.log(message)
   if (avatar_input.files.length < 1) {
-    send_message_data(nickname, message, "");
+    send_message_data(nickname, message, "")
     return;
   }
   let file = avatar_input.files[0];
-  getBase64(file).then(
-    file_base64 => {
-      send_message_data(nickname, message, file_base64);
-    }
-  )
+  getBase64(file).then(file_base64 => send_message_data(nickname, message, file_base64))
 }
 function send_message_data(nickname, message, avatar) {
-  message_data = 
   fetch("send_message.php",
     {
       method: "POST",
@@ -51,9 +46,7 @@ function send_message_data(nickname, message, avatar) {
       },
       body: JSON.stringify({"nickname": nickname, "message": message, "avatar": avatar})
     })
-  .then(response => {
-    response.json()
-  })
+  .then(response => response.json())
   .then(data => {
     if (data == undefined)
       console.log("Сообщение отослано, но вместо ответа в POST получен undefined.")
@@ -63,12 +56,10 @@ function send_message_data(nickname, message, avatar) {
     {
       console.log("Отослано сообщение:")
       console.log(data)
-      add_message_data(data);
+      add_message_data(data)
     }
   })
-  .catch(error => {
-    console.log(error)
-  });
+  .catch(error => console.log(error))
 }
 function add_message_data(message_data) {
   messages_collection = document.getElementById("messages_collection")
@@ -77,7 +68,7 @@ function add_message_data(message_data) {
   let message_element = create_message_element(message_data.id, message_data.nickname, message_data.message, message_data.avatar)
   messages_collection.appendChild(message_element)
   messages_collection.hidden = false;
-  conditional_hide_messages_empty_text(true);
+  conditional_hide_messages_empty_text(true)
 }
 function conditional_hide_messages_collection(){
   messages_collection = document.getElementById("messages_collection")
@@ -123,9 +114,7 @@ function messages_data_to_message_elements() {
         add_message_data(message_data)
     }
   })
-  .catch(error => {
-    console.log(error)
-  });
+  .catch(error => console.log(error))
 }
 function create_message_element(id, nickname, message, avatar) {
 
@@ -188,7 +177,5 @@ function delete_message(element_id) {
       conditional_hide_messages_collection()
     }
   })
-  .catch(error => {
-    console.log(error)
-  })
+  .catch(error => console.log(error))
 }
