@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- CSS  -->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
-    <link rel="stylesheet" href="css/styles.css">
+    <link type="text/css" rel="stylesheet" href="css/styles.css">
   </head>
   <body>
     <nav class="grey" role="navigation">
@@ -20,7 +20,7 @@
           <a href="#" data-target="mobile-nav" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down" id="desktop-nav">
           <li><a href="#" class="waves-effect transparent btn"><i class="material-icons left">account_circle</i>Обо мне</a></li>
-          <li><a href="#" class="waves-effect transparent btn"><i class="material-icons left">folder</i>Проекты</a></li>
+          <li><a href="projects.html" class="waves-effect transparent btn"><i class="material-icons left">folder</i>Проекты</a></li>
           <li><a href="send_message.html" class="waves-effect transparent btn"><i class="material-icons left">contact_mail</i>Гостевая книга</a></li>
           <li><a href="#" class="waves-effect transparent btn"><i class="material-icons left">add</i>Дополнительная информация</a></li>
           </ul>
@@ -28,32 +28,49 @@
     </nav>
     <ul class="sidenav sidenav-close" id="mobile-nav">
       <li><a href="#" class="waves-effect"><i class="material-icons">account_circle</i>Обо мне</a></li>
-      <li><a href="#" class="waves-effect"><i class="material-icons">folder</i>Проекты</a></li>
+      <li><a href="projects.html" class="waves-effect"><i class="material-icons">folder</i>Проекты</a></li>
       <li><a href="send_message.html" class="waves-effect"><i class="material-icons">contact_mail</i>Гостевая книга</a></li>
       <li><a href="#" class="waves-effect"><i class="material-icons">add</i>Дополнительная информация</a></li>
     </ul>
     <div id="navigation"></div>
     <main class="main">
       <div class="container-fluid main__container">
-        <img
-          srcset="images/clue_hatkid_locked_Illustrator.png 2048w,
-                  images/clue_hatkid_locked_Illustrator_1024px.png 1024w,
-                  images/clue_hatkid_locked_Illustrator_512px.png 512w,
-                  images/clue_hatkid_locked_Illustrator_256px.png 256w,
-                  images/clue_hatkid_locked_Illustrator_128px.png 128w,
-                  images/clue_hatkid_locked_Illustrator_64px.png 64w"
-          src="images/clue_hatkid_locked_Illustrator.png" alt="?" class="main__img">
+        <img class="main__img pulse_on_hover" src="images/clue_hatkid_locked_Illustrator.png" alt="?">
+        <h1 class="header center black-text">Что день грядущий нам готовит?</h1>
+        <div class="row center">
+          <h5 class="header col s12 light">Добро пожаловать на мой сайт! Хотите найти что-то интересное? В колонках снизу всякое может быть!</h5>
+        </div>
         <section class="main__columns">
           <div class="row">
             <div class="column_left cyan col s12 m6 l6" id="main_column_left">
-              <h2 class="center orange-text"><i class="column_material_icon material-icons">settings</i></h2>
-              <h5 class="center">В разработке</h5>
-              <p class="center light">Эта колонка ещё в разработке.</p>
+              <h2 class="center orange-text"><i class="rotate_cw_on_hover column_material_icon material-icons">settings</i></h2>
+              <h5 class="center">A Hat in Time</h5>
+              <p class="center light">Некоторые видео с моего YouTube-канала по игре <a class="white-text" href="https://store.steampowered.com/app/253230">A Hat in Time.</a>.</p>
+              <div class="row">
+                <div class="input-field col s12 m12 l12">
+                  <div class="center video-container">
+                    <iframe class="iframe_paded" width="560" height="315" src="https://www.youtube.com/embed/k8lTBpL8jbY?si=Eo088R24zWsfb_ue" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="center video-container">
+                  <iframe class="iframe_paded" width="560" height="315" src="https://www.youtube.com/embed/Q37k6uHn86c?si=gtvJzBAmW7NsOELG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+              </div>
             </div>
             <div class="column_right orange col s12 m6 l6" id="main_column_right">
-              <h2 class="center cyan-text"><i class="column_material_icon material-icons">settings</i></h2>
-              <h5 class="center">В разработке</h5>
-              <p class="center light">Да, и эта тоже. Кто вообще удивлён?</p>
+              <h2 class="center cyan-text"><i class="rotate_ccw_on_hover column_material_icon material-icons">settings</i></h2>
+              <h5 class="center">Музыка</h5>
+              <p class="center light">Вот несколько моих любимых альбомов:</p>
+              <div class="row">
+                <iframe class="iframe_paded" frameborder="0" allow="clipboard-write" style="border:none;width:100%;height:450px;" width="100%" height="450" src="https://music.yandex.ru/iframe/album/9071202">Слушайте <a href="https://music.yandex.ru/album/9071202">Kill Voice</a> — <a href="https://music.yandex.ru/artist/4245882">Skafandr</a> на Яндекс Музыке</iframe>
+              </div>
+              <div class="row">
+                <div style="left: 0; width: 100%; height: 450px; position: relative;">
+                  <iframe class="iframe_paded" src="https://embed.music.apple.com/ru/album/sgt-peppers-lonely-hearts-club-band-remix/1573250333" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen allow="encrypted-media; fullscreen; clipboard-write;"></iframe>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -67,8 +84,7 @@
       </div>
     </footer>
     <!--  Scripts-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="js/materialize.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>

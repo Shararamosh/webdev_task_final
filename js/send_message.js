@@ -13,7 +13,8 @@ function getBase64(file) {
   });
 }
 message_submit_btn = document.getElementById("message_submit")
-message_submit_btn.addEventListener("click", upload_message_data)
+if (message_submit_btn != null)
+  message_submit_btn.addEventListener("click", upload_message_data)
 function init_sidenav_mobile() {
   var elems = document.querySelectorAll(".sidenav");
   M.Sidenav.init(elems);

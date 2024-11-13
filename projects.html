@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/BombBadgeIcon.png">
+    <title>Сайт абсолютно ни о чём</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- CSS  -->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <nav class="grey" role="navigation">
+      <div class="nav-wrapper">
+          <a href="index.html" class="navbar-img">
+          <img class="responsive-img" src="images/BombBadgeIcon.png">
+          </a>
+          <a href="#" data-target="mobile-nav" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down" id="desktop-nav">
+          <li><a href="#" class="waves-effect transparent btn"><i class="material-icons left">account_circle</i>Обо мне</a></li>
+          <li><a href="projects.html" class="waves-effect transparent btn disabled"><i class="material-icons left">folder</i>Проекты</a></li>
+          <li><a href="send_message.html" class="waves-effect transparent btn"><i class="material-icons left">contact_mail</i>Гостевая книга</a></li>
+          <li><a href="#" class="waves-effect transparent btn"><i class="material-icons left">add</i>Дополнительная информация</a></li>
+          </ul>
+      </div>
+    </nav>
+    <ul class="sidenav sidenav-close" id="mobile-nav">
+      <li><a href="#" class="waves-effect"><i class="material-icons">account_circle</i>Обо мне</a></li>
+      <li><a href="projects.html" class="waves-effect"><i class="material-icons">folder</i>Проекты</a></li>
+      <li><a href="send_message.html" class="waves-effect"><i class="material-icons">contact_mail</i>Гостевая книга</a></li>
+      <li><a href="#" class="waves-effect"><i class="material-icons">add</i>Дополнительная информация</a></li>
+    </ul>
+    <div id="navigation"></div>
+    <main class="main">
+      <div class="container-fluid main__container">
+        <center><i class="main_material_icon material-icons">folder</i></center>
+        <h1 class="header center black-text">Проекты</h1>
+        <section class="main__columns">
+          <div class="row">
+            <div class="column_left cyan col s12 m6 l6" id="main_column_left">
+              <div class="column_left__icon-block">
+                <div class="center black-text">
+                  <i class="column_material_icon material-icons large">build</i>
+                  <h5 class="center">Мастерская Steam</h5>
+                  <p class="center light">В конце 2018 года я начал изучать язык UnrealScript, который используется в движке Unreal Engine 3. На этом языке я написал много модов для игры <a class="white-text" href="https://store.steampowered.com/app/253230">A Hat in Time</a>. Вот некоторые из них:</p>
+                </div>
+              </div>
+              <div class="row">
+                <center>
+                  <steam-workshop itemid="2903156191"></steam-workshop>
+                </center>
+              </div>
+              <div class="row">
+                <center>
+                  <steam-workshop itemid="2955930149"></steam-workshop>
+                </center>
+              </div>
+              <div class="row">
+                <center>
+                  <steam-workshop itemid="2803028318"></steam-workshop>
+                </center>
+              </div>
+              <div class="row">
+                <center>
+                  <steam-workshop itemid="2246096431"></steam-workshop>
+                </center>
+              </div>
+              <div class="row">
+                <center>
+                  <steam-workshop itemid="2034138813"></steam-workshop>
+                </center>
+              </div>
+              <div class="row">
+                <center>
+                  <steam-workshop itemid="1958473721"></steam-workshop>
+                </center>
+              </div>
+            </div>
+            <div class="column_right orange col s12 m6 l6" id="main_column_right">
+              <div class="column_right__icon-block">
+                <div class="center black-text">
+                  <i class="column_material_icon material-icons large">terminal</i>
+                  <h5 class="center">GitHub</h5>
+                  <p class="center light" id="messages_empty_text">С недавнего времени я начал выкладывать свои проекты на GitHub. Большая часть из них написана на языке Python с использованием таких библиотек как numpy, Pillow и tkinter. Также я активно пользуюсь Blender Python API и пишу под него плагины.</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="repo-card" data-repo="Shararamosh/Pillow_PNG_TGA_Editor"></div>
+              </div>
+              <div class="row">
+                <div class="repo-card" data-repo="Shararamosh/flatc_deserializer"></div>
+              </div>
+              <div class="row">
+                <div class="repo-card" data-repo="Shararamosh/gfbanm_importer"></div>
+              </div>
+              <div class="row">
+                <div class="repo-card" data-repo="Shararamosh/JiggleArmature"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="page-footer grey">
+      <div class="footer-copyright" id="copyright_footer">
+          <div class="container">
+          Это сделал <a class="black-text text-lighten-3" href="http://vk.com/shararamosh">он</a> с использованием <a class="black-text text-lighten-3" href="http://materializecss.com">Materialize</a>.
+          </div>
+      </div>
+    </footer>
+    <!--  Scripts-->
+    <script src="js/materialize.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="https://www.steamwidgets.net/api/resource/query?type=js&module=workshop&version=v1"></script>
+    <script src="https://tarptaeya.github.io/repo-card/repo-card.js"></script>
+  </body>
+</html>
