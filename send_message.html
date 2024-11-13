@@ -46,11 +46,12 @@
                 </div>
               </div>
               <div class="row">
-                <div class="input-field col s12 m6 l6">
-                  <i class="orange-text material-icons prefix">person</i>
-                  <input id="nickname_input" type="text" class="white-text validate" required maxlength="64" data-length="64">
-                  <label for="nickname_input" class="white-text">Имя</label>
-                </div>
+                <form id="message_form">
+                  <div class="input-field col s12 m6 l6">
+                    <i class="orange-text material-icons prefix">person</i>
+                    <input id="nickname_input" type="text" class="white-text validate" required maxlength="64" data-length="64">
+                    <label for="nickname_input" class="white-text">Имя</label>
+                  </div>
                   <div class="file-field input-field col s12 m6 l6">
                     <div class="waves-effect orange btn-small">
                       <i id="avatar_empty" class="material-icons left">image</i>Аватар
@@ -65,7 +66,8 @@
                     <input id="message_input" type="text" class="white-text validate" required minlength="1" data-length="256">
                     <label for="message_input" class="white-text">Сообщение</label>
                   </div>
-                </div>
+                </form>
+              </div>
               <div class="row">
                 <center>
                   <button class="orange btn waves-effect" type="submit" id="message_submit">Отправить
