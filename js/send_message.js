@@ -30,16 +30,21 @@ function upload_message_data() {
   let nickname = nickname_input.value
   let message = message_input.value
   let files = avatar_input.files
-  message_form = document.getElementById("message_form")
-  if (message_form != null)
-    message_form.reset()
   console.log(nickname+" написал:")
   console.log(message)
   if (files.length < 1) {
     send_message_data(nickname, message, "")
+    message_form = document.getElementById("message_form")
+    if (message_form != null)
+      message_form.reset()
     return;
   }
-  getBase64(files[0]).then(file_base64 => send_message_data(nickname, message, file_base64))
+  getBase64(files[0]).then(file_base64 => {
+    send_message_data(nickname, message, file_base64)
+    message_form = document.getElementById("message_form")
+    if (message_form != null)
+      message_form.reset()
+  })
 }
 function send_message_data(nickname, message, avatar) {
   fetch("send_message.php",
